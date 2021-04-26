@@ -63,8 +63,10 @@ angular.module('wcagReporter')
       },
 
       getBlob: function (data, type) {
+        console.log("blobing: " + data +"("+type+")")
         data = data || exportModel.getString();
         type = type || 'application/json;charset=utf-8';
+        console.log("blobing: " + data +"("+type+")")
         return new Blob([data], { type: type });
       },
 
