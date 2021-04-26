@@ -195,7 +195,10 @@ app.post('/ods', function (request, response) {
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[31]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.basicFunctionality?website.basicFunctionality:"");
+            // text = doc.createTextNode(website.basicFunctionality?website.basicFunctionality:"");
+            text = doc.createTextNode(report.data['@graph'][0].essentialFunctionality?report.data['@graph'][0].essentialFunctionality:"");
+            
+
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[33]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
@@ -891,7 +894,10 @@ app.post('/xlsx', function (request, response) {
             workbook.sheet("01.Definición de ámbito").cell("C27").value(website.siteName);
             workbook.sheet("01.Definición de ámbito").cell("C29").value(website.url);
             workbook.sheet("01.Definición de ámbito").cell("C31").value(website.siteScope);
-            workbook.sheet("01.Definición de ámbito").cell("C33").value(website.basicFunctionality);
+            // workbook.sheet("01.Definición de ámbito").cell("C33").value(website.basicFunctionality);
+
+            workbook.sheet("01.Definición de ámbito").cell("C33").value(report.data['@graph'][0].essentialFunctionality);
+            
             workbook.sheet("01.Definición de ámbito").cell("C35").value(website.revisionDate);
 
             var accessibilitySupportBaseline = report.data['@graph'][0].evaluationScope.accessibilitySupportBaseline;
