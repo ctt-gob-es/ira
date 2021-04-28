@@ -40,6 +40,32 @@ angular.module('wcagReporter')
     $scope.structuredSample = evalSampleModel.structuredSample;
     $scope.randomSample = evalSampleModel.randomSample;
 
+    $scope.missingRequired = function(){
+
+      
+
+      if($scope.scope.website.uraName==""
+      || $scope.scope.website.uraDIR3==""
+      || $scope.scope.website.uraScope==""
+      || $scope.scope.website.scopeDIR3==""
+      || $scope.scope.website.responsibleEntity==""
+      || $scope.scope.website.responsibleEntityDIR3==""
+      || $scope.scope.website.responsiblePerson==""
+      || $scope.scope.website.siteName==""
+      || $scope.scope.website.url==""
+      || $scope.scope.website.siteScope==""
+      || $scope.scope.website.revisionDate==""
+      || $scope.scope.website.typology==""
+      || $scope.scope.website.territorialScope==""
+      || $scope.scope.website.evaluationType==""
+      || $scope.scope.conformanceTarget==""
+      || $scope.scope.reliedUponThematic.length == 0
+      || $scope.explore.essentialFunctionality==""){
+        return true;
+      }
+      return false;
+    }
+
     $scope.hasMinimumRandom = function () {
       return $scope.randomSample.webpage.length >= $scope.structuredSample.webpage.length / 10
     }

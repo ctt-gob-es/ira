@@ -42,6 +42,17 @@
           <li>{{'REPORT.REPORT_UNFINISHED_INFO' | translate}}</li>
         </ul>
       </div>
+
+      <div class="alert alert-success" ng-if="!missingRequired()">
+        <p ng-bind-html="'REPORT.REPORT_NO_MISSING_FIELDS'|translate"></p>
+      </div>
+
+      <div class="alert alert-danger" ng-if="missingRequired()">
+        <p ng-bind-html="'REPORT.REPORT_MISSING_FIELDS'|translate"></p>
+        <ul>
+          <li>{{'REPORT.REPORT_MISSING_FIELDS_INFO' | translate}}</li>
+        </ul>
+      </div>
     </div>
 
     <div class="container save-panel col-sm-6">

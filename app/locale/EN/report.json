@@ -17,5 +17,8 @@
     "HD_CRITERIA_REPORT": "Detailed audit results",
     "REPORT_FINISHED": "<strong>Review completed:</strong> Yes",
     "REPORT_UNFINISHED": "<strong>Review completed:</strong> No",
-    "REPORT_UNFINISHED_INFO": "There are validation criteria marked as 'Not tested' or 'Do not decide'."
+    "REPORT_UNFINISHED_INFO": "There are validation criteria marked as 'Not tested' or 'Do not decide'.",
+    "REPORT_NO_MISSING_FIELDS": "<strong>Mandatory fields are filled: </strong> Yes",
+    "REPORT_MISSING_FIELDS": "<strong>Mandatory fields filled: </strong> No",
+    "REPORT_MISSING_FIELDS_INFO": "Some mandatory field of Step 1, 2 or 3 is not filled in. All mandatory fields must be filled in."
 }

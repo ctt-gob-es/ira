@@ -170,7 +170,7 @@ app.post('/ods', function (request, response) {
 
             var typologyText="";
             switch (website.typology) {
-                case "TYPO1": typologyText = "Mayoritariamente estáctico"; break;
+                case "TYPO1": typologyText = "Mayoritariamente estático"; break;
                 case "TYPO2": typologyText = "Servicio electrónico"; break;
             }
 
@@ -579,7 +579,7 @@ app.post('/ods', function (request, response) {
 
                             } else {
                                 var type = doc.createElement("text:p");
-                                var text = doc.createTextNode("N/A");
+                                var text = doc.createTextNode("N/T");
                                 type.appendChild(text);
                                 select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
 
@@ -645,7 +645,7 @@ app.post('/ods', function (request, response) {
                                 }
                             } else {
                                 var type = doc.createElement("text:p");
-                                var text = doc.createTextNode("N/A");
+                                var text = doc.createTextNode("N/T");
                                 type.appendChild(text);
                                 select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
                             }
@@ -884,7 +884,7 @@ app.post('/xlsx', function (request, response) {
 
             var typologyText;
             switch (website.typology) {
-                case "TYPO1": typologyText = "Mayoritariamente estáctico"; break;
+                case "TYPO1": typologyText = "Mayoritariamente estático"; break;
                 case "TYPO2": typologyText = "Servicio electrónico"; break;
             }
 
