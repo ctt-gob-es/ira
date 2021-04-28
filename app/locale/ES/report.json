@@ -20,5 +20,5 @@
     "REPORT_UNFINISHED_INFO": "Existen criterios de validación marcados como 'No testeado' o 'No decide'.",
     "REPORT_NO_MISSING_FIELDS": "<strong>Campos obligatorios rellenos: </strong> Sí",
     "REPORT_MISSING_FIELDS": "<strong>Campos obligatorios rellenos: </strong> No",
-    "REPORT_MISSING_FIELDS_INFO": "Algún campo obligatorio del Pao 1, 2 o 3 no se ha rellenado. Todos los campos obligatorios deben estar cubiertos."
+    "REPORT_MISSING_FIELDS_INFO": "Algún campo obligatorio del Paso 1, 2 o 3 no se ha rellenado. Todos los campos obligatorios deben estar cubiertos."
 }
