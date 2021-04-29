@@ -48,9 +48,11 @@ Thumbs.db
 *.mov
 *.wmv
 
+
 .history/**
 .tmp/**
 .sass-cache/**
 
 server.crt
 server.key
+
