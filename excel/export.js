@@ -131,44 +131,44 @@ app.post('/ods', function (request, response) {
             var website = report.data['@graph'][0].evaluationScope.website;
 
             var titleElm = doc.createElement("text:p");
-            var text = doc.createTextNode(website.uraName?website.uraName:"");
+            var text = doc.createTextNode(website.uraName ? website.uraName : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[7]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.uraDIR3?website.uraDIR3:"");
+            text = doc.createTextNode(website.uraDIR3 ? website.uraDIR3 : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[9]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.uraScope?website.uraScope:"");
+            text = doc.createTextNode(website.uraScope ? website.uraScope : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[11]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.scopeDIR3?website.scopeDIR3:"");
+            text = doc.createTextNode(website.scopeDIR3 ? website.scopeDIR3 : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[13]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.responsibleEntity?website.responsibleEntity:"");
+            text = doc.createTextNode(website.responsibleEntity ? website.responsibleEntity : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[17]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.responsibleEntityDIR3?website.responsibleEntityDIR3:"");
+            text = doc.createTextNode(website.responsibleEntityDIR3 ? website.responsibleEntityDIR3 : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[19]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.responsiblePerson?website.responsiblePerson:"");
+            text = doc.createTextNode(website.responsiblePerson ? website.responsiblePerson : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[21]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
 
 
-            var typologyText="";
+            var typologyText = "";
             switch (website.typology) {
                 case "TYPO1": typologyText = "Mayoritariamente estático"; break;
                 case "TYPO2": typologyText = "Servicio electrónico"; break;
@@ -180,37 +180,37 @@ app.post('/ods', function (request, response) {
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[25]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.siteName?website.siteName:"");
+            text = doc.createTextNode(website.siteName ? website.siteName : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[27]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.url?website.url:"");
+            text = doc.createTextNode(website.url ? website.url : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[29]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.siteScope?website.siteScope:"");
+            text = doc.createTextNode(website.siteScope ? website.siteScope : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[31]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
             // text = doc.createTextNode(website.basicFunctionality?website.basicFunctionality:"");
-            text = doc.createTextNode(report.data['@graph'][0].essentialFunctionality?report.data['@graph'][0].essentialFunctionality:"");
-            
+            text = doc.createTextNode(report.data['@graph'][0].essentialFunctionality ? report.data['@graph'][0].essentialFunctionality : "");
+
 
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[33]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.revisionDate?website.revisionDate:"");
+            text = doc.createTextNode(website.revisionDate ? website.revisionDate : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[35]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             var accessibilitySupportBaseline = report.data['@graph'][0].evaluationScope.accessibilitySupportBaseline;
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(accessibilitySupportBaseline?accessibilitySupportBaseline:"");
+            text = doc.createTextNode(accessibilitySupportBaseline ? accessibilitySupportBaseline : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[41]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
@@ -270,12 +270,12 @@ app.post('/ods', function (request, response) {
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[60]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.evaluationCompany?website.evaluationCompany:"");
+            text = doc.createTextNode(website.evaluationCompany ? website.evaluationCompany : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[62]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
             titleElm = doc.createElement("text:p");
-            text = doc.createTextNode(website.observations?website.observations:"");
+            text = doc.createTextNode(website.observations ? website.observations : "");
             titleElm.appendChild(text);
             select(`//office:spreadsheet/table:table[@table:name='01.Definición de ámbito']/table:table-row[64]/table:table-cell[3]`, doc)[0].appendChild(titleElm);
 
@@ -435,7 +435,7 @@ app.post('/ods', function (request, response) {
 
                 //Page URL
                 var urlElm = doc.createElement("text:p");
-                var url = doc.createTextNode(webpages[i].source ? webpages[i].source : (webpages[i].description?webpages[i].description:""));
+                var url = doc.createTextNode(webpages[i].source ? webpages[i].source : (webpages[i].description ? webpages[i].description : ""));
                 urlElm.appendChild(url);
                 select(`//office:spreadsheet/table:table[@table:name='03.Muestra']/table:table-row[${row}]/table:table-cell[5]`, doc)[0].appendChild(urlElm);
 
@@ -480,42 +480,49 @@ app.post('/ods', function (request, response) {
                         for (var j = 0; j < webpages.length && j < 35; j++) {
                             var cell = [4, cellRow];
 
-                            if (resultsByType[j]) {
+                            var findResult = false;
 
-                                if (resultsByType[j].result.outcome == "earl:passed") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("Pasa");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:failed") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("Falla");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:cantTell") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/D");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:inapplicable") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/A");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                            for (var r = 0; r < resultsByType.length; r++) {
+
+                                if (resultsByType[r] && (resultsByType[r].subject[0] == webpages[j].id)) {
+                                    findResult = true;
+
+                                    if (resultsByType[r].result.outcome == "earl:passed") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("Pasa");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:failed") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("Falla");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:cantTell") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/D");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:inapplicable") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/A");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
+                                    else {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/T");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
                                 }
-                                else {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/T");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                }
-                            } else {
+
+                            }
+                            if (!findResult) {
                                 var type = doc.createElement("text:p");
                                 var text = doc.createTextNode("N/T");
                                 type.appendChild(text);
                                 select(`//office:spreadsheet/table:table[@table:name='P1.Perceptible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
                             }
-
                             cellRow = cellRow + 1;
                         }
                     }
@@ -546,38 +553,47 @@ app.post('/ods', function (request, response) {
                         for (var j = 0; j < webpages.length && j < 35; j++) {
                             cell = [4, cellRow];
 
-                            if (resultsByType[j]) {
+                            var findResult = false;
 
-                                if (resultsByType[j].result.outcome == "earl:passed") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("Pasa");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:failed") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("Falla");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:cantTell") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/D");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                }
-                                else if (resultsByType[j].result.outcome == "earl:inapplicable") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/A");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                }
-                                else {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/T");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                            for (var r = 0; r < resultsByType.length; r++) {
+
+                                if (resultsByType[r] && (resultsByType[r].subject[0] == webpages[j].id)) {
+                                    findResult = true;
+
+                                    if (resultsByType[r].result.outcome == "earl:passed") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("Pasa");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:failed") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("Falla");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:cantTell") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/D");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
+                                    else if (resultsByType[r].result.outcome == "earl:inapplicable") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/A");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
+                                    else {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/T");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P2.Operable']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
+
                                 }
 
-                            } else {
+                            }
+
+                            if (!findResult) {
                                 var type = doc.createElement("text:p");
                                 var text = doc.createTextNode("N/T");
                                 type.appendChild(text);
@@ -615,35 +631,43 @@ app.post('/ods', function (request, response) {
                         for (var j = 0; j < webpages.length && j < 35; j++) {
 
                             cell = [4, cellRow];
-                            if (resultsByType[j]) {
-                                if (resultsByType[j].result.outcome == "earl:passed") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("Pasa");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:failed") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("Falla");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:cantTell") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/D");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:inapplicable") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/A");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                            var findResult = false;
+
+                            for (var r = 0; r < resultsByType.length; r++) {
+
+                                if (resultsByType[r] && (resultsByType[r].subject[0] == webpages[j].id)) {
+                                    findResult = true;
+                                    if (resultsByType[r].result.outcome == "earl:passed") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("Pasa");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:failed") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("Falla");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:cantTell") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/D");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:inapplicable") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/A");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
+                                    else {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/T");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
                                 }
-                                else {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/T");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P3.Comprensible']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                }
-                            } else {
+                            }
+
+                            if (!findResult) {
                                 var type = doc.createElement("text:p");
                                 var text = doc.createTextNode("N/T");
                                 type.appendChild(text);
@@ -677,39 +701,46 @@ app.post('/ods', function (request, response) {
                         }
 
                     } else {
-                        for (var j = 0; j < resultsByType.length && j < webpages.length && j < 35; j++) {
+                        for (var j = 0; j < webpages.length && j < 35; j++) {
 
                             cell = [4, cellRow];
 
-                            if (resultsByType[j]) {
-                                if (resultsByType[j].result.outcome == "earl:passed") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("Pasa");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:failed") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("Falla");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:cantTell") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/D");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                } else if (resultsByType[j].result.outcome == "earl:inapplicable") {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/A");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                            var findResult = false;
+
+                            for (var r = 0; r < resultsByType.length; r++) {
+
+                                if (resultsByType[r] && (resultsByType[r].subject[0] == webpages[j].id)) {
+                                    findResult = true;
+                                    if (resultsByType[r].result.outcome == "earl:passed") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("Pasa");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:failed") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("Falla");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:cantTell") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/D");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    } else if (resultsByType[r].result.outcome == "earl:inapplicable") {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/A");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
+                                    else {
+                                        var type = doc.createElement("text:p");
+                                        var text = doc.createTextNode("N/T");
+                                        type.appendChild(text);
+                                        select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
+                                    }
                                 }
-                                else {
-                                    var type = doc.createElement("text:p");
-                                    var text = doc.createTextNode("N/T");
-                                    type.appendChild(text);
-                                    select(`//office:spreadsheet/table:table[@table:name='P4.Robusto']/table:table-row[${cell[1]}]/table:table-cell[${cell[0]}]`, doc)[0].appendChild(type);
-                                }
-                            } else {
+                            }
+                            if (!findResult) {
                                 var type = doc.createElement("text:p");
                                 var text = doc.createTextNode("N/T");
                                 type.appendChild(text);
@@ -897,7 +928,7 @@ app.post('/xlsx', function (request, response) {
             // workbook.sheet("01.Definición de ámbito").cell("C33").value(website.basicFunctionality);
 
             workbook.sheet("01.Definición de ámbito").cell("C33").value(report.data['@graph'][0].essentialFunctionality);
-            
+
             workbook.sheet("01.Definición de ámbito").cell("C35").value(website.revisionDate);
 
             var accessibilitySupportBaseline = report.data['@graph'][0].evaluationScope.accessibilitySupportBaseline;
@@ -1032,6 +1063,9 @@ app.post('/xlsx', function (request, response) {
                 if (perceptibleTablesData.has(i)) {
                     var resultsByType = report.data["@graph"][0].auditResult[perceptibleTablesData.get(i)].hasPart;
 
+
+
+
                     if (resultsByType.length == 0) {
                         for (var j = 0; j < webpages.length && j < 35; j++) {
                             var cell = [4, cellRow];
@@ -1044,22 +1078,32 @@ app.post('/xlsx', function (request, response) {
                         for (var j = 0; j < webpages.length && j < 35; j++) {
                             var cell = [4, cellRow];
 
-                            if (resultsByType[j]) {
+                            var findResult = false;
 
-                                if (resultsByType[j].result.outcome == "earl:passed") {
-                                    workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("Pasa");
-                                } else if (resultsByType[j].result.outcome == "earl:failed") {
-                                    workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("Falla");
-                                } else if (resultsByType[j].result.outcome == "earl:cantTell") {
-                                    workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("N/D");
-                                } else if (resultsByType[j].result.outcome == "earl:inapplicable") {
-                                    workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("N/A");
-                                } else {
-                                    workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("N/T");
+                            for (var r = 0; r < resultsByType.length; r++) {
+
+                                if (resultsByType[r] && (resultsByType[r].subject[0] == webpages[j].id)) {
+                                    findResult = true;
+                                    if (resultsByType[r].result.outcome == "earl:passed") {
+                                        workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("Pasa");
+                                    } else if (resultsByType[r].result.outcome == "earl:failed") {
+                                        workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("Falla");
+                                    } else if (resultsByType[r].result.outcome == "earl:cantTell") {
+                                        workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("N/D");
+                                    } else if (resultsByType[r].result.outcome == "earl:inapplicable") {
+                                        workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("N/A");
+                                    } else {
+                                        workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("N/T");
+                                    }
                                 }
-                            } else {
+
+                            }
+
+                            if (!findResult) {
                                 workbook.sheet("P1.Perceptible").cell("D" + cell[1]).value("N/T");
                             }
+
+
 
                             cellRow = cellRow + 1;
                         }
@@ -1087,20 +1131,28 @@ app.post('/xlsx', function (request, response) {
                         for (var j = 0; j < webpages.length && j < 35; j++) {
                             var cell = [4, cellRow];
 
-                            if (resultsByType[j]) {
+                            var findResult = false;
 
-                                if (resultsByType[j].result.outcome == "earl:passed") {
-                                    workbook.sheet("P2.Operable").cell("D" + cell[1]).value("Pasa");
-                                } else if (resultsByType[j].result.outcome == "earl:failed") {
-                                    workbook.sheet("P2.Operable").cell("D" + cell[1]).value("Falla");
-                                } else if (resultsByType[j].result.outcome == "earl:cantTell") {
-                                    workbook.sheet("P2.Operable").cell("D" + cell[1]).value("N/D");
-                                } else if (resultsByType[j].result.outcome == "earl:inapplicable") {
-                                    workbook.sheet("P2.Operable").cell("D" + cell[1]).value("N/A");
-                                } else {
-                                    workbook.sheet("P2.Operable").cell("D" + cell[1]).value("N/T");
+                            for (var r = 0; r < resultsByType.length; r++) {
+
+                                if (resultsByType[r] && (resultsByType[r].subject[0] == webpages[j].id)) {
+                                    findResult = true;
+
+                                    if (resultsByType[r].result.outcome == "earl:passed") {
+                                        workbook.sheet("P2.Operable").cell("D" + cell[1]).value("Pasa");
+                                    } else if (resultsByType[r].result.outcome == "earl:failed") {
+                                        workbook.sheet("P2.Operable").cell("D" + cell[1]).value("Falla");
+                                    } else if (resultsByType[r].result.outcome == "earl:cantTell") {
+                                        workbook.sheet("P2.Operable").cell("D" + cell[1]).value("N/D");
+                                    } else if (resultsByType[r].result.outcome == "earl:inapplicable") {
+                                        workbook.sheet("P2.Operable").cell("D" + cell[1]).value("N/A");
+                                    } else {
+                                        workbook.sheet("P2.Operable").cell("D" + cell[1]).value("N/T");
+                                    }
                                 }
-                            } else {
+                            }
+
+                            if (!findResult) {
                                 workbook.sheet("P2.Operable").cell("D" + cell[1]).value("N/T");
                             }
 
@@ -1131,20 +1183,28 @@ app.post('/xlsx', function (request, response) {
                         for (var j = 0; j < webpages.length && j < 35; j++) {
                             var cell = [4, cellRow];
 
-                            if (resultsByType[j]) {
+                            var findResult = false;
 
-                                if (resultsByType[j].result.outcome == "earl:passed") {
-                                    workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("Pasa");
-                                } else if (resultsByType[j].result.outcome == "earl:failed") {
-                                    workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("Falla");
-                                } else if (resultsByType[j].result.outcome == "earl:cantTell") {
-                                    workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("N/D");
-                                } else if (resultsByType[j].result.outcome == "earl:inapplicable") {
-                                    workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("N/A");
-                                } else {
-                                    workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("N/T");
+                            for (var r = 0; r < resultsByType.length; r++) {
+
+                                if (resultsByType[r] && (resultsByType[r].subject[0] == webpages[j].id)) {
+                                    findResult = true;
+
+                                    if (resultsByType[r].result.outcome == "earl:passed") {
+                                        workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("Pasa");
+                                    } else if (resultsByType[r].result.outcome == "earl:failed") {
+                                        workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("Falla");
+                                    } else if (resultsByType[r].result.outcome == "earl:cantTell") {
+                                        workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("N/D");
+                                    } else if (resultsByType[r].result.outcome == "earl:inapplicable") {
+                                        workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("N/A");
+                                    } else {
+                                        workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("N/T");
+                                    }
                                 }
-                            } else {
+                            }
+
+                            if (!findResult) {
                                 workbook.sheet("P3.Comprensible").cell("D" + cell[1]).value("N/T");
                             }
 
@@ -1175,23 +1235,29 @@ app.post('/xlsx', function (request, response) {
                         for (var j = 0; j < webpages.length && j < 35; j++) {
                             var cell = [4, cellRow];
 
-                            if (resultsByType[j]) {
+                            var findResult = false;
 
-                                if (resultsByType[j].result.outcome == "earl:passed") {
-                                    workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("Pasa");
-                                } else if (resultsByType[j].result.outcome == "earl:failed") {
-                                    workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("Falla");
-                                } else if (resultsByType[j].result.outcome == "earl:cantTell") {
-                                    workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("N/D");
-                                } else if (resultsByType[j].result.outcome == "earl:inapplicable") {
-                                    workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("N/A");
-                                } else {
-                                    workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("N/T");
+                            for (var r = 0; r < resultsByType.length; r++) {
+
+                                if (resultsByType[r] && (resultsByType[r].subject[0] == webpages[j].id)) {
+                                    findResult = true;
+                                    if (resultsByType[r].result.outcome == "earl:passed") {
+                                        workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("Pasa");
+                                    } else if (resultsByType[r].result.outcome == "earl:failed") {
+                                        workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("Falla");
+                                    } else if (resultsByType[r].result.outcome == "earl:cantTell") {
+                                        workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("N/D");
+                                    } else if (resultsByType[r].result.outcome == "earl:inapplicable") {
+                                        workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("N/A");
+                                    } else {
+                                        workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("N/T");
+                                    }
                                 }
-                            } else {
-                                workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("N/T");
                             }
 
+                            if (!findResult) {
+                                workbook.sheet("P4.Robusto").cell("D" + cell[1]).value("N/T");
+                            }
                             cellRow = cellRow + 1;
                         }
                     }
