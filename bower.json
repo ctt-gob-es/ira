@@ -17,7 +17,7 @@
     "angular-mocks": "~1.4.7",
     "angular-scenario": "~1.4.7",
     "angular-translate-loader-static-files": "~2.8.1",
-    "textAngular": "^1.5.16",
+    "textAngular": "^1.5.15",
     "exceljs": "^4.0.0"
   },
   "devDependencies": {

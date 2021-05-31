@@ -6,7 +6,7 @@ services:
     image: oaw/wcagemtool        
     command: npm start
     restart: always
-    container_name: wcag_em_tool_node
+    container_name: wcag_em_tool_node_2
   
   nginx:
     image: artefactos-ic.scae.redsara.es:6000/nginx:1.13.8-alpine      
@@ -21,4 +21,4 @@ services:
       - node
     restart: always
     shm_size: '1gb'
-    container_name: wcag_em_tool_nginx
+    container_name: wcag_em_tool_nginx_2
