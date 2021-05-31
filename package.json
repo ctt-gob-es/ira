@@ -71,7 +71,7 @@
     "grunt-parallel": "^0.5.1",
     "grunt-shell": "^3.0.1",
     "ng2-ckeditor": "^1.2.6",
-    "textangular": "^1.5.15",
+    "textangular": "^1.5.16",
     "uuid": "^8.1.0",
     "xlsx-style": "^0.8.13",
     "xmldom": "^0.3.0",
