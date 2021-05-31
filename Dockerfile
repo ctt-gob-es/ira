@@ -1,5 +1,5 @@
-#FROM artefactos-ic.scae.redsara.es:6000/alpine:3.10
-FROM alpine:3.10
+FROM artefactos-ic.scae.redsara.es:6000/alpine:3.10
+#ROM alpine:3.10
 
 # Install base packages
 RUN apk update 
@@ -32,9 +32,9 @@ WORKDIR /opt/wcag-em-tool
 
 # Install dependencies
 RUN npm install -g bower 
-#RUN npm install -g forever 
-RUN bower install --allow-root
+RUN npm install -g forever 
 RUN npm install
+RUN bower install --allow-root
 RUN npm run build
 
 #Usuario node para ejecutar el renderer
