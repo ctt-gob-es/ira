@@ -24,18 +24,23 @@ angular.module('wcagReporter')
 
     $scope.criteria = evalAuditModel.getCriteriaSorted();
 
-    $scope.allVerifications = function () {
-      for (var i = 0; i < $scope.criteria.length; i++) {
-        for (var j = 0; j < $scope.criteria[i].hasPart.length; j++) {
-          if ($scope.criteria[i].hasPart[j].result.outcome == "earl:cantTell"
-            || $scope.criteria[i].hasPart[j].result.outcome == "earl:untested") {
-            return false;
-          }
-        }
-      }
+    $scope.allVerifications = false;
 
-      return true;
-    }
+    // $scope.allVerifications = function () {
+
+      
+
+    //   for (var i = 0; i < $scope.criteria.length; i++) {
+    //     for (var j = 0; j < $scope.criteria[i].hasPart.length; j++) {
+    //       if ($scope.criteria[i].hasPart[j].result.outcome == "earl:cantTell"
+    //         || $scope.criteria[i].hasPart[j].result.outcome == "earl:untested") {
+    //         return false;
+    //       }
+    //     }
+    //   }
+
+    //   return true;
+    // }
 
     $scope.structuredSample = evalSampleModel.structuredSample;
     $scope.randomSample = evalSampleModel.randomSample;
@@ -180,7 +185,23 @@ angular.module('wcagReporter')
         .attr(
           'href',
           wcagReporterExport.getBlobUrl(htmlBlob)
-        );
+        );      
+
+        var hasAllVerifications = true;
+
+        for (var i = 0; i < $scope.criteria.length; i++) {
+          for (var j = 0; j < $scope.criteria[i].hasPart.length; j++) {
+            if ($scope.criteria[i].hasPart[j].result.outcome == "earl:cantTell"
+              || $scope.criteria[i].hasPart[j].result.outcome == "earl:untested") {
+                console.log($scope.criteria[i])
+                hasAllVerifications=  false;
+                break;
+            }
+          }
+        }
+
+        $scope.allVerifications =hasAllVerifications
+
     });
 
     $scope.downloadJsonStart = function () {

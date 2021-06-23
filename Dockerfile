@@ -1,5 +1,5 @@
 FROM artefactos-ic.scae.redsara.es:6000/alpine:3.10
-#ROM alpine:3.10
+# FROM alpine:3.10
 
 # Install base packages
 RUN apk update 
@@ -29,6 +29,8 @@ RUN echo @edge http://nl.alpinelinux.org/alpine/v3.10/community >> /etc/apk/repo
 # Copy app files and set working dir
 COPY . /opt/wcag-em-tool
 WORKDIR /opt/wcag-em-tool
+RUN rm -rf app/bower_components 
+RUN rm -rf app/node_modules
 
 # Install dependencies
 RUN npm install -g bower 

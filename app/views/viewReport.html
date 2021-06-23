@@ -32,11 +32,11 @@
       </div>
 
 
-      <div class="alert alert-success" ng-if="allVerifications()">
+      <div class="alert alert-success" ng-if="allVerifications">
         <p ng-bind-html="'REPORT.REPORT_FINISHED'|translate"></p>
       </div>
 
-      <div class="alert alert-danger" ng-if="!allVerifications()">
+      <div class="alert alert-danger" ng-if="!allVerifications">
         <p ng-bind-html="'REPORT.REPORT_UNFINISHED'|translate"></p>
         <ul>
           <li>{{'REPORT.REPORT_UNFINISHED_INFO' | translate}}</li>
