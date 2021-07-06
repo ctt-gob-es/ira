@@ -195,6 +195,9 @@ if (cluster.isMaster) {
                     switch (website.typology) {
                         case "TYPO1": typologyText = "Mayoritariamente estático"; break;
                         case "TYPO2": typologyText = "Servicio electrónico"; break;
+                        case "TYPO3": typologyText = "Sedes electrónicas y servicios electrónicos"; break;
+                        case "TYPO4": typologyText = "Sitios web"; break;
+                        case "TYPO5": typologyText = "Intranets y Extranets"; break;
                     }
 
 
@@ -948,6 +951,9 @@ if (cluster.isMaster) {
                     switch (website.typology) {
                         case "TYPO1": typologyText = "Mayoritariamente estático"; break;
                         case "TYPO2": typologyText = "Servicio electrónico"; break;
+                        case "TYPO3": typologyText = "Sedes electrónicas y servicios electrónicos"; break;
+                        case "TYPO4": typologyText = "Sitios web"; break;
+                        case "TYPO5": typologyText = "Intranets y Extranets"; break;
                     }
 
                     workbook.sheet("01.Definición de ámbito").cell("C25").value(typologyText);

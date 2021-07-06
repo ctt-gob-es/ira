@@ -77,8 +77,11 @@ angular.module('wcagReporter')
     ];
 
     scopeModel.typologyOptions = [
-      'TYPO1',
-      'TYPO2'
+      // 'TYPO1',
+      // 'TYPO2'
+       'TYPO3',
+       'TYPO4',
+       'TYPO5'
     ];
 
 
