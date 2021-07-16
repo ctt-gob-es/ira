@@ -68,7 +68,7 @@
     </label>
 
 
-    <div ng-class="col2">
+    <div ng-class="col2" ng-if="suffix != 'rand'">
       <select name="pageType" id="pageType" ng-model="page.pageType"
         ng-class="!isValid(page.pageType) ? 'form-control invalid' : 'form-control'" ng-required="true">
         <option value=""></option> <!-- not selected / blank option -->
@@ -85,13 +85,23 @@
         <option value="PAGE_TYPE_11">{{'SAMPLE.PAGE_TYPE_11' | translate}}</option>
         <option value="PAGE_TYPE_12">{{'SAMPLE.PAGE_TYPE_12' | translate}}</option>
         <option value="PAGE_TYPE_13">{{'SAMPLE.PAGE_TYPE_13' | translate}}</option>
-        <option value="PAGE_TYPE_14">{{'SAMPLE.PAGE_TYPE_14' | translate}}</option>
+        <!-- <option value="PAGE_TYPE_14">{{'SAMPLE.PAGE_TYPE_14' | translate}}</option> -->
       </select>
       <div class="invalid-feedback" ng-if="!isValid(page.pageType)">
         {{'SAMPLE.REQUIRED_FIELD' | translate}}
       </div>
     </div>
 
+    <div ng-class="col2" ng-if="suffix === 'rand'">
+      
+      <select size="1" name="pageType" id="pageType" ng-model="page.pageType"
+        ng-class="!isValid(page.pageType) ? 'form-control invalid' : 'form-control'" ng-required="true">
+        <option value="PAGE_TYPE_14" selected="selected">{{'SAMPLE.PAGE_TYPE_14' | translate}}</option>
+      </select>
+      <div class="invalid-feedback" ng-if="!isValid(page.pageType)">
+        {{'SAMPLE.REQUIRED_FIELD' | translate}}
+      </div>
+    </div>
 
 
     <label ng-class="colHide" for="rand_page_desc_{{$index}}_{{$id}}">

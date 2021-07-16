@@ -67,6 +67,7 @@ angular.module('wcagReporter')
 
       sampleModel.randomSample.webpage.push(page);
       page.id = '_:rand_' + num;
+      page.pageType = 'PAGE_TYPE_14';
       page.title = '';
       return page;
     };
