@@ -33,6 +33,7 @@ RUN rm -rf app/bower_components
 RUN rm -rf app/node_modules
 
 # Install dependencies
+RUN npm config set strict-ssl false
 RUN npm install -g bower 
 RUN npm install -g forever 
 RUN npm install

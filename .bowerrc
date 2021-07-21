@@ -1,5 +1,4 @@
 {
      "directory": "app/bower_components",
-     "strict-ssl": false,
-     "https-proxy": ""
+     "registry": "https://registry.bower.io"
 }
