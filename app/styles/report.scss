@@ -179,7 +179,7 @@
     padding: 0.2em 0.1em;
   }
 }
-
+ 
 button.glyphicon-copy {
   background: url("../images/copy.png") 7px 3px no-repeat !important;
   width: 30px;
@@ -199,4 +199,8 @@ button.glyphicon {
 .glyphicon-none::before {
   content: "\e013";
   color: transparent !important;
+}
+
+.deprecated-tool{
+  color: #dc3545;
 }

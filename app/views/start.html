@@ -4,12 +4,17 @@
 <main>
 <h1>{{ setTitle( translate('START.TITLE') ) }}</h1>
 
+<div class="aviso">
+  <p><strong><span class="deprecated-tool">AVISO</span>:</strong> Esta herramienta solamente recoge los criterios de conformidad de las WCAG 2.1, si bien para realizar una revisi&oacute;n de accesibilidad (art&iacute;culo 17 del RD 1112./2018) hay que revisar los requisitos de accesibilidad de la UNE-EN 301549:2022. Por este motivo <span class="deprecated-tool"><strong>se descontin&uacute;a la Herramienta IRA y por tanto tambi&eacute;n el formato JSON en los IRA de sitios web.</strong></span>.</p>
+  <p><span class="deprecated-tool"><strong>Si se dispone de un IRA en formato JSON</strong></span> se puede utilizar la <span class="deprecated-tool"><strong>Herramienta IRA</strong></span> para generar el <span class="deprecated-tool"><strong> IRA en formato ODS y XLSX (versi&oacute;n 1.0.4)</strong></span>. El <strong><a href="https://administracionelectronica.gob.es/comunidades/accesibilidad/documentacion" target="_blank">Conversor de IRAs</a></strong> (disponible en la Comunidad de Accesibilidad - Documentaci&oacute;n - Informes IRA), permite convertir el IRA (versi&oacute;n 1.0.4) a la &uacute;ltima versi&oacute;n (2.0.0).<strong><span class="deprecated-tool"> La Herramienta IRA estar&aacute; disponible para este fin hasta el 30 de junio</span>.</strong></p>
+</div>
+
 <h2>{{ 'START.SUBTITLE' | translate }}</h2>
 <h2><button-collapse target="rootHide" property="start1" collapsed>
     {{ 'START.INTRO_HD' | translate }}
 </button-collapse></h2>
 
-<div collapse="rootHide.start1" class="{{initial}}">
+<div collapse="rootHide.start1" class="{{initial}}"> 
   <p ng-bind-html="'START.INTRO_1' | translate: {
     link_wcagem: 'http://www.w3.org/TR/WCAG-EM/',
     link_report: '#!/view_report',
